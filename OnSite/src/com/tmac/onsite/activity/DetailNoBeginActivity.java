@@ -7,6 +7,7 @@ import android.R.layout;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -21,8 +22,7 @@ import android.widget.PopupWindow.OnDismissListener;
  */
 public class DetailNoBeginActivity extends Activity {
 	
-	private Button btn_finish;
-	private Button btn_nofinish;
+	private Button btn_upload_img;
 	private AudioPopupWindow popupWindow;
 	private LinearLayout layout;
 	private ImageView iv_back;
@@ -40,8 +40,7 @@ public class DetailNoBeginActivity extends Activity {
 
 	private void initDatas() {
 		// TODO Auto-generated method stub
-		btn_finish = (Button) findViewById(R.id.task_finish);
-		btn_nofinish = (Button) findViewById(R.id.task_no_finish);
+		btn_upload_img = (Button) findViewById(R.id.upload_pre_image);
 		layout = (LinearLayout) findViewById(R.id.nobegin_layout_bottom);
 		iv_back = (ImageView) findViewById(R.id.iv_back_detail);
 		popupWindow = new AudioPopupWindow(this);
@@ -49,42 +48,13 @@ public class DetailNoBeginActivity extends Activity {
 
 	private void initEvents() {
 		// TODO Auto-generated method stub
-		btn_finish.setOnClickListener(new OnClickListener() {
+		
+		btn_upload_img.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				AlertDialog.Builder builder = new AlertDialog.Builder(DetailNoBeginActivity.this);
-				builder.setMessage(R.string.finish_task_dialog_message)
-				.setPositiveButton(R.string.ensure_finish, new DialogInterface.OnClickListener() {
-					
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						// TODO Auto-generated method stub
-						popupWindow = new AudioPopupWindow(DetailNoBeginActivity.this);
-						popupWindow.setAnimationStyle(R.style.dir_popupwindow_anim);
-						popupWindow.showAsDropDown(layout, 0, -layout.getMeasuredHeight());
-						lightOff();
-						popupWindow.setOnDismissListener(new OnDismissListener() {
-							
-							@Override
-							public void onDismiss() {
-								// TODO Auto-generated method stub
-								lightOn();
-							}
-						});
-					}
-				})
-				.setNegativeButton(R.string.waiting, new DialogInterface.OnClickListener() {
-					
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						// TODO Auto-generated method stub
-						
-					}
-				})
-				.create()
-				.show();
+				startActivity(new Intent(DetailNoBeginActivity.this, UploadImgActivity.class));	
 			}
 		});
 		

@@ -49,6 +49,9 @@
 	<string name="day">天</string>
 	
 	<!-- NoBegin_Detail -->
+	<string name="upload">上传</string>
+	<string name="upload_img">上传施工前照片</string>
+	<string name="get_img">获取照片</string>
 	<string name="nobegin_task">还未施工任务</string>
 	<string name="task_finish">任务完成</string>
 	<string name="task_nofinish">未能完成</string>

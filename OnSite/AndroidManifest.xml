@@ -8,16 +8,22 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     
+    <!-- 在SDCard中创建与删除文件权限 -->
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+  	
+  	<uses-feature android:name = "android.hardware.camera" />
+	<uses-feature android:name = "android.hardware.camera.autofocus" />
+    
     
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="17" />
+        android:minSdkVersion="19"
+        android:targetSdkVersion="21" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        android:theme="@android:style/Theme.NoTitleBar" >
         <activity
             android:name=".activity.MainActivity"
             android:label="@string/app_name" >
@@ -45,13 +51,18 @@
         </activity> -->
         
         <activity 
-            android:name=".activity.DetailTaskActivity">
+            android:name=".activity.DetailTaskActivity"
+            android:theme="@style/AppTheme">
         </activity>
         
         <activity 
             android:name=".activity.DetailNoBeginActivity">
-            
         </activity>
+        
+        <activity
+            android:name=".activity.UploadImgActivity"></activity>
+        
+        <activity android:name=".activity.SelectImgActivity"></activity>
         
     </application>
 

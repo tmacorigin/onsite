@@ -351,25 +351,15 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:gravity="center"
-        android:padding="20dp">
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
         
         <Button 
-            android:id="@+id/task_finish"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:id="@+id/upload_pre_image"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/task_finish_btn"
-            android:text="@string/task_finish"
-            android:textColor="@color/white"
-            android:textSize="@dimen/detail_nobegin_task_btn"/>
-        
-         <Button 
-            android:id="@+id/task_no_finish"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="50dp"
-            android:background="@color/task_nofinish_btn"
-            android:text="@string/task_nofinish"
+            android:text="@string/upload_img"
             android:textColor="@color/white"
             android:textSize="@dimen/detail_nobegin_task_btn"/>
         

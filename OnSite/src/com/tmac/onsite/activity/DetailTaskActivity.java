@@ -10,6 +10,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -27,6 +28,7 @@ public class DetailTaskActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_detail_task);
 		initViews();
 		initEvents();
@@ -66,6 +68,7 @@ public class DetailTaskActivity extends Activity {
 						})
 						.create()
 						.show();
+				
 				
 			}
 		});
