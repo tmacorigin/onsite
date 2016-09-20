@@ -58,5 +58,8 @@
 	<dimen name="detail_nobegin_task_btn">18sp</dimen>
 	<dimen name="audio_hint_text">14sp</dimen>
 	<dimen name="audio_popup_height">200dp</dimen>
+	
+	
+	<dimen name="actionBarSize">32dip</dimen>
 	    
 </resources>

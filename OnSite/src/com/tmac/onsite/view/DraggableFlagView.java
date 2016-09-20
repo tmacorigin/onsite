@@ -62,7 +62,7 @@ public class DraggableFlagView extends View {
         int indexCount = a.getIndexCount();  
         for (int i = 0; i < indexCount; i++) {  
             int attrIndex = a.getIndex(i);  
-            if (attrIndex == R.styleable.DraggableFlagView_color) {  
+            if (attrIndex == R.styleable.DraggableFlagView_color1) {  
                 patientColor = a.getColor(attrIndex, Color.RED);  
             }  
         }  

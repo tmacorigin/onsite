@@ -64,6 +64,17 @@
         
         <activity android:name=".activity.SelectImgActivity"></activity>
         
+        
+         <activity
+            android:theme="@style/customTheme"
+            android:name="me.tmac.photopicker.PhotoPickerActivity"
+            />
+
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name="me.tmac.photopicker.PhotoPagerActivity"
+            />
+        
     </application>
 
 </manifest>
