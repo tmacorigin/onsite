@@ -345,11 +345,10 @@
             android:textSize="14sp" />
     </LinearLayout>
     
-    <LinearLayout 
+    <RelativeLayout 
         android:id="@+id/nobegin_layout_bottom"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:gravity="center"
         android:paddingLeft="50dp"
         android:paddingRight="50dp">
@@ -358,12 +357,94 @@
             android:id="@+id/upload_pre_image"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/task_finish_btn"
-            android:text="@string/upload_img"
+            android:background="@color/upload_pre_construct_btn"
+            android:text="@string/upload_pre_img"
             android:textColor="@color/white"
             android:textSize="@dimen/detail_nobegin_task_btn"/>
         
-    </LinearLayout>
+        <Button 
+            android:id="@+id/upload_end_image"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:background="@color/upload_end_construct_btn"
+            android:text="@string/upload_end_img"
+            android:textColor="@color/white"
+            android:textSize="@dimen/detail_nobegin_task_btn"/>
+        
+        <RelativeLayout 
+            android:id="@+id/nobegin_layout_bottom_1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            >
+            
+            <!-- 施工完成 -->
+            <Button 
+                android:id="@+id/contrust_finish"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="@string/task_finish"
+                android:textColor="@color/white"
+                android:background="@color/upload_pre_construct_btn"
+                />
+            
+            <!-- 未能完成 -->
+            <Button 
+                android:id="@+id/contrust_no_finish"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:text="@string/task_nofinish"
+                android:textColor="@color/white"
+                android:background="@color/upload_end_construct_btn"
+                />
+            
+        </RelativeLayout>
+        
+        
+        <RelativeLayout 
+            android:id="@+id/nobegin_layout_bottom_2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            >
+			
+            <!-- 施工图片 -->
+            <Button 
+                android:id="@+id/contrust_img_btn"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="@string/task_finish"
+                android:textColor="@color/white"
+                android:background="@color/upload_pre_construct_btn"
+                />
+            
+            <!-- 录音时间 00:28 -->
+            <Button 
+                android:id="@+id/record_time_btn"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:background="@color/upload_end_construct_btn"
+                />
+            
+            <!-- 查看原因 -->
+            <Button 
+                android:id="@+id/check_reason_btn"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:text="@string/check_reason"
+                android:textColor="@color/white"
+                android:background="@color/upload_end_construct_btn"
+                android:visibility="gone"
+                />
+            
+        </RelativeLayout>
+        
+    </RelativeLayout>
     
 
 </LinearLayout>

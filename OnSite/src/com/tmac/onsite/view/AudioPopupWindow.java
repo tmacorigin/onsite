@@ -67,7 +67,8 @@ public class AudioPopupWindow extends PopupWindow implements OnClickListener, On
 	private int time_state;
 	private static final int RECORD = 0;
 	private static final int PLAY = 1;
-	private final String TAG = AudioPopupWindow.class.getSimpleName();
+	private OnUpLoadClickListener mListener;
+	private final String TAG = "LC-AudioPopupWindow";
 	
 	
 	
@@ -78,9 +79,10 @@ public class AudioPopupWindow extends PopupWindow implements OnClickListener, On
 	};
 	
 	
-	public AudioPopupWindow(Context context) {
+	public AudioPopupWindow(Context context, OnUpLoadClickListener listener) {
 		// TODO Auto-generated constructor stub
 		this.mContext = context;
+		this.mListener = listener;
 		calWindthAndHeight();
 		init();
 		
@@ -192,14 +194,15 @@ public class AudioPopupWindow extends PopupWindow implements OnClickListener, On
 			iv_pause_audio.setVisibility(View.VISIBLE);
 			if(isFirstPlay){
 				initTimerTask();
-				AudioManager.playAudio(audioManager.getAudioPath(), new OnCompletionListener() {
+				playAudio(true);
+				/*AudioManager.playAudio(audioManager.getAudioPath(), new OnCompletionListener() {
 					
 					@Override
 					public void onCompletion(MediaPlayer mp) {
 						// TODO Auto-generated method stub
 						resetPlay();
 					}
-				});
+				});*/
 			}else {
 				AudioManager.resume();
 				iv_pause_audio.setVisibility(View.VISIBLE);
@@ -214,6 +217,9 @@ public class AudioPopupWindow extends PopupWindow implements OnClickListener, On
 			break;
 			
 		case R.id.upload_audio_btn:
+			// 上传录音
+			dismiss();
+			mListener.onUpload(record_time);
 			
 			break;
 			
@@ -350,5 +356,21 @@ public class AudioPopupWindow extends PopupWindow implements OnClickListener, On
 			file.delete();
 		}
 		
+	}
+	
+	public void playAudio(final boolean isReset){
+		AudioManager.playAudio(audioManager.getAudioPath(), new OnCompletionListener() {
+			
+			@Override
+			public void onCompletion(MediaPlayer mp) {
+				// TODO Auto-generated method stub
+				if(isReset)
+					resetPlay();
+			}
+		});
+	}
+	
+	public interface OnUpLoadClickListener{
+		void onUpload(String time);
 	}
 }

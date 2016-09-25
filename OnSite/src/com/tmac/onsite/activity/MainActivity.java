@@ -16,6 +16,7 @@ import com.tmac.onsite.fragment.LeftMenuFragment;
 import com.tmac.onsite.fragment.RobTaskFragment;
 import com.tmac.onsite.fragment.SendTaskFragment;
 import com.tmac.onsite.utils.FindViewById;
+import com.tmac.onsite.utils.StatusBarUtil;
 import com.tmac.onsite.view.DraggableFlagView;
 import com.tmac.onsite.view.DraggableFlagView.OnDraggableFlagViewListener;
 
@@ -32,6 +33,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -48,7 +50,12 @@ public class MainActivity extends SlidingFragmentActivity{
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		/*//透明状态栏
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        //透明导航栏
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);*/
 		setContentView(R.layout.activity_main);
+		StatusBarUtil.setColor(this, getResources().getColor(R.color.layout_title_bg),0);
 		
 		// 添加SlidingMenu
 		addLeftMenu();

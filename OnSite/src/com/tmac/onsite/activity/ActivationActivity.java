@@ -5,6 +5,7 @@ package com.tmac.onsite.activity;
 
 import com.tmac.onsite.R;
 import com.tmac.onsite.R.drawable;
+import com.tmac.onsite.utils.StatusBarUtil;
 import com.tmac.onsite.view.PhoneEditText;
 
 import android.app.Activity;
@@ -35,6 +36,7 @@ public class ActivationActivity extends Activity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_activation);
+		StatusBarUtil.setTranslucent(this, 0);
 		
 		initView();
 		setEditChanged();

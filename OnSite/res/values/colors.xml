@@ -23,11 +23,17 @@
     <color name="nobegin_text_type">#F73809</color>
     
     <color name="layout_detail_background">#F5F5F5</color>
-    <color name="task_finish_btn">#FF7200</color>
- 	<color name="task_nofinish_btn">#00558E</color>   
+    <color name="upload_pre_construct_btn">#FF7200</color>
+ 	<color name="task_nofinish_btn">#00558E</color>
+ 	<color name="upload_end_construct_btn">#005492</color>   
  	<color name="audio_hint_text">#9F9F9F</color>
  	<color name="audio_underline">#EBEBEB</color>
  	<color name="audio_bottom_btn_press">#666666</color>
+ 	
+ 	<color name="underline">#50566444</color>
+ 	<color name="login_btn_normal">#AFAFAF</color>
+ 	<color name="login_btn_unpress">#0078D7</color>
+ 	<color name="login_btn_press">#00558E</color>
     
     
 </resources>

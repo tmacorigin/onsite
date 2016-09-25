@@ -21,15 +21,15 @@
             />
         
         <TextView 
+            android:id="@+id/upload_tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/upload_img"
             android:textColor="@color/white"
             android:textSize="@dimen/detail_task_text"
             android:layout_centerInParent="true"/>
         
         <Button 
-            android:id="@+id/cam_send_btn"
+            android:id="@+id/send_img_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="发送"

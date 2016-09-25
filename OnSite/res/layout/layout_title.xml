@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     android:id="@+id/layout_title"
     android:background="@color/layout_title_bg"
-    android:padding="@dimen/layout_padding">
+    android:padding="@dimen/layout_padding"
+    >
     
     <FrameLayout
         android:id="@+id/layout_settings"

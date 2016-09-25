@@ -18,6 +18,7 @@ import android.widget.ImageView;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.PhotoViewHolder>{
 
+	
 	private ArrayList<String> photoPaths = new ArrayList<String>();
 	private LayoutInflater inflater;
 

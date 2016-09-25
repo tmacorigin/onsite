@@ -14,6 +14,7 @@ import java.util.Set;
 
 import com.tmac.onsite.R;
 import com.tmac.onsite.adapter.SelectImgAdapter;
+import com.tmac.onsite.utils.StatusBarUtil;
 
 import android.R.bool;
 import android.app.Activity;
@@ -71,6 +72,7 @@ public class SelectImgActivity extends Activity implements OnClickListener{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_select_img);
+		StatusBarUtil.setColor(this, getResources().getColor(R.color.layout_title_bg),0);
 		
 		initView();
 		initDatas();

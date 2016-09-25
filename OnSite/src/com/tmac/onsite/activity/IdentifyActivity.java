@@ -5,11 +5,13 @@ package com.tmac.onsite.activity;
 
 import com.tmac.onsite.R;
 import com.tmac.onsite.R.drawable;
+import com.tmac.onsite.utils.StatusBarUtil;
 import com.tmac.onsite.utils.TimeCount;
 import com.tmac.onsite.view.PhoneEditText;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -37,7 +39,8 @@ public class IdentifyActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_identify);
-		
+		StatusBarUtil.setTranslucent(this, 0);
+//		StatusBarUtil.setColor(this, Color.BLUE, 122);
 		initView();
 		timeCount = new TimeCount(60000, 1000, agin);
 		setEditChanged();
@@ -119,7 +122,7 @@ public class IdentifyActivity extends Activity {
 			case R.id.identify_primit:
 				Toast.makeText(getApplicationContext(), "验证码输入正确！",
 						Toast.LENGTH_SHORT).show();
-				Intent intent = new Intent(IdentifyActivity.this, MainActivity.class);
+				Intent intent = new Intent(IdentifyActivity.this, LoginActivity.class);
 				startActivity(intent);
 				break;
 			case R.id.identify_agin:

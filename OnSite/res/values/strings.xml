@@ -50,19 +50,42 @@
 	
 	<!-- NoBegin_Detail -->
 	<string name="upload">上传</string>
-	<string name="upload_img">上传施工前照片</string>
+	<string name="upload_pre_img">上传施工前照片</string>
+	<string name="upload_end_img">上传施工后照片</string>
 	<string name="get_img">获取照片</string>
 	<string name="nobegin_task">还未施工任务</string>
-	<string name="task_finish">任务完成</string>
+	<string name="task_finish">施工完成</string>
 	<string name="task_nofinish">未能完成</string>
 	<string name="finish_task_dialog_message">确定该工单完成了吗？</string>
+	<string name="ensure_construct_finish">确认施工已完成？</string>
 	<string name="ensure_finish">确认完成</string>
-	<string name="waiting">稍后再说</string>
+	<string name="waiting">稍候再说</string>
+	<string name="ensure_construct_nofinish">确认施工无法完成？</string>
+	<string name="cannot_finish">无法完成</string>	
+	<string name="try_again">再试试看</string>
 	<string name="audio_hint">请用户靠近手机后开始录音</string>
 	<string name="audio_time">00:00</string>
+	<string name="check_reason">查看原因</string>
 	<string name="cancle_audio">暂不录音</string>
 	<string name="upload_audio">上传录音</string>
 	<string name="re_audio">重新录音</string>
+	<string name="upload_record_success">录音上传成功</string>
 	
+	<!-- Login -->
+	<string name="login_title">商务通</string>
+	<string name="login">登录</string>
+	<string name="hint_user">输入用户名</string>
+	<string name="hint_password">输入密码</string>
+	
+	<!-- UploadImg -->
+	<string name="upload_message">确认这是要上传的施工图片吗?</string>
+	<string name="ensure_upload">确认上传</string>
+	<string name="wait_upload">稍后再说</string>
+	
+	<!-- cannot_finish_reason -->
+	<string name="edit_reason_hint">请输入未能完成该工单的理由......</string>
+	<string name="ensure_send_reason">确定发送该理由吗？</string>
+	<string name="ensure_send">确定</string>
+	<string name="cancel_send">取消</string>
 	
 </resources>
