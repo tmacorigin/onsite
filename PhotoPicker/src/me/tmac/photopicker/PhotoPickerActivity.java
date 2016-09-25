@@ -164,7 +164,7 @@ public class PhotoPickerActivity extends AppCompatActivity {
       super.onBackPressed();
       return true;
     }
-
+    // 点击完成将选中的图片集合返回
     if (item.getItemId() == R.id.done) {
       Intent intent = new Intent();
       ArrayList<String> selectedPhotos = pickerFragment.getPhotoGridAdapter().getSelectedPhotoPaths();
@@ -188,4 +188,9 @@ public class PhotoPickerActivity extends AppCompatActivity {
   public void setShowGif(boolean showGif) {
     this.showGif = showGif;
   }
+  
+  public interface OnCaptureImgListener{
+	  void OnCapture(String path);
+  }
+  
 }

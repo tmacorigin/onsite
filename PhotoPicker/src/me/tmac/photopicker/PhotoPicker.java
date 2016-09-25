@@ -5,7 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+
 import java.util.ArrayList;
+
+import me.tmac.photopicker.PhotoPickerActivity.OnCaptureImgListener;
 
 /**
  * Created by Donglua on 16/6/25.
@@ -87,6 +90,9 @@ public class PhotoPicker {
      */
     public void start(@NonNull Activity activity) {
       start(activity, REQUEST_CODE);
+    }
+    
+    public void setOnCaptureImgListener(OnCaptureImgListener listener){
     }
 
     public PhotoPickerBuilder setPhotoCount(int photoCount) {

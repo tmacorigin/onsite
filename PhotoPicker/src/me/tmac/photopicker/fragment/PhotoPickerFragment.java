@@ -217,11 +217,16 @@ public class PhotoPickerFragment extends Fragment {
     if (requestCode == ImageCaptureManager.REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
       captureManager.galleryAddPic();
       if (directories.size() > 0) {
+    	  // 相机拍照的回调
         String path = captureManager.getCurrentPhotoPath();
         PhotoDirectory directory = directories.get(INDEX_ALL_PHOTOS);
         directory.getPhotos().add(INDEX_ALL_PHOTOS, new Photo(path.hashCode(), path));
         directory.setCoverPath(path);
         photoGridAdapter.notifyDataSetChanged();
+        
+        // 将照片回调到RecycleView中显示
+        
+        
       }
     }
   }
